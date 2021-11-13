@@ -3,7 +3,18 @@ img:hover{
     filter: invert(0.18) hue-rotate(197deg) sepia(0.85);
     /* background: yellow; */
     display: inline;
+}
 
+#stars {
+    white-space: nowrap;
+    
+}
+#stars div{
+    display: inline-block;
+}
+
+#stars img{
+    height: 1em;
 }
 
 
