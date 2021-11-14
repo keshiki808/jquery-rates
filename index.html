@@ -5,22 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="css\rates.css">
     <title>Jquery-Rates</title>
     <div><img src="images\star.svg" alt="star"></div>
     <div><img src="images\white-star.png" alt="star"></div>
 </head>
 <body>
-    <div id = "stars">
+    <div id = "ratestars">
+        <!-- <img class = starstyle src="images\white-star.png" alt="star">
+        <img class = starstyle src="images\white-star.png" alt="star">
+        <img class = starstyle src="images\white-star.png" alt="star">
+        <img class = starstyle src="images\white-star.png" alt="star">
+        <img class = starstyle src="images\white-star.png" alt="star"> -->
+
+        <!-- <div><img src="images\white-star.png" alt="star"></div>
         <div><img src="images\white-star.png" alt="star"></div>
         <div><img src="images\white-star.png" alt="star"></div>
         <div><img src="images\white-star.png" alt="star"></div>
-        <div><img src="images\white-star.png" alt="star"></div>
-        <div><img src="images\white-star.png" alt="star"></div>
+        <div><img src="images\white-star.png" alt="star"></div> -->
     </div>
+
+    <ul id = "testzone"></ul>
 
     
     <script src=jquery-3.6.0.slim.min.js type="text/javascript"></script>
-    <script src=jquery-rates.js type="text/javascript"></script>
+    <script src=js\jquery-rates.js type="text/javascript"></script>
+    <script src=script.js type = "text/javascript"></script>
+    <script>
+        $(function(){
+            $("#ratestars").rates()
+        })
+    </script>
 
 </body>
 </html>
