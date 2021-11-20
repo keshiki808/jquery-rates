@@ -1,5 +1,14 @@
 (function ($) {
-  $.fn.rates = function () {
+  $.fn.rates = function (options) {
+    const settings = $.extend({
+      shadeColor: 'invert(0.18) hue-rotate(197deg) sepia(0.85)',
+      starHeight: '25px',
+      
+      
+
+    }
+
+  }, options)
 
       return this.each(function(){
 
