@@ -3,10 +3,11 @@
     const settings = $.extend({
       shadeColor: 'invert(0.18) hue-rotate(197deg) sepia(0.85)',
       starHeight: '25px',
+      starCount: 5,
       
       
 
-    }
+    
 
   }, options)
 
@@ -18,16 +19,15 @@
           value: 0
         }
 
+
+
         console.log(score.value)
 
 
         
+        colorHueSetter()
+        createStars($container,settings.starCount);
 
-        createStars($container);
-        createStars($container);
-        createStars($container);
-        createStars($container);
-        createStars($container);
         $(this).find('img').hover(function(){
           
           let starIndex = ($('img').index(this));
@@ -64,12 +64,20 @@
           score.value = starIndex + 1
         })
 
-        function createStars(container){
+        function createStars(container, count){
           console.log("Test")
+          for (i=0; i< count; i++){
           $imageStar = $('<img class = starstyle >');
           $imageStar.attr('src', 'images\\white-star.png')
           $(container).append($imageStar)
+          }
           
+        }
+
+        function colorHueSetter(){
+          if (settings.shadeColor.toLowerCase == "red"){
+            settings.shadeColor = 'invert(24%) sepia(45%) saturate(3312%) hue-rotate(352deg) brightness(92%) contrast(93%)'
+          } 
         }
 
       });
