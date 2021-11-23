@@ -1,7 +1,7 @@
 (function ($) {
   $.fn.rates = function (options) {
     const settings = $.extend({
-      shadeColor: 'invert(0.18) hue-rotate(197deg) sepia(0.85)',
+      shadeColor: 'brightness(0) saturate(100%) invert(89%) sepia(82%) saturate(5150%) hue-rotate(9deg) brightness(105%) contrast(107%)',
       starHeight: '25px',
       starCount: 5,
       
@@ -23,6 +23,8 @@
 
         console.log(score.value)
 
+        
+
 
         
         colorHueSetter()
@@ -35,7 +37,7 @@
           for (let i = 0; i<=starIndex; i++){
             console.log('hover in')
             let star = ($('img').get(i))
-            $(star).addClass('colored')
+            $(star).css("filter", settings.shadeColor)
           }
           }, function(){
           console.log('hover out')
@@ -45,21 +47,20 @@
           for (let j = score.value ; j<starTotal; j++){
             console.log('hover out')
             let star = ($('img').get(j))
-            $(star).removeClass('colored')
+            $(star).css("filter", "")
           }
         })
 
         
 
         $(this).find('img').on('click', function(){
-          // console.log($('$container').find(img))
           console.log($('container img'))
           let starIndex = ($('img').index(this));
           console.log(starIndex)
-          $('img').removeClass('colored')
+          $('img').css("filter", '')
           for (let i = 0; i<= starIndex; i++){
             let star = ($('img').get(i))
-            $(star).addClass('colored')
+            $(star).css("filter", settings.shadeColor)
           }
           score.value = starIndex + 1
         })
@@ -75,8 +76,8 @@
         }
 
         function colorHueSetter(){
-          if (settings.shadeColor.toLowerCase == "red"){
-            settings.shadeColor = 'invert(24%) sepia(45%) saturate(3312%) hue-rotate(352deg) brightness(92%) contrast(93%)'
+          if (settings.shadeColor.toLowerCase() == "red"){
+            settings.shadeColor = 'brightness(0) saturate(100%) invert(21%) sepia(70%) saturate(4945%) hue-rotate(352deg) brightness(87%) contrast(102%)'
           } 
         }
 
