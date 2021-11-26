@@ -11,6 +11,7 @@
     return this.each(function () {
       let $imageStar;
       const $container = this;
+
       const score = {
         value: 0,
       };
@@ -18,25 +19,22 @@
       console.log(score.value);
 
       colorHueSetter();
-      createStars($container, settings.starCount);
+      createStars(this, settings.starCount);
+
+      const $eachStar = $(this).find('img');
 
       $(this).find('img').hover(function () {
         const starIndex = ($('img').index(this));
-
+        $eachStar.css('filter', '');
         for (let i = 0; i <= starIndex; i++) {
-          console.log('hover in');
           const star = ($('img').get(i));
           $(star).css('filter', settings.shadeColor);
         }
       }, () => {
-        console.log('hover out');
-        const starTotal = $($container).find('img').length;
-        console.log(starTotal);
-        console.log(score.value);
-        for (let j = score.value; j < starTotal; j++) {
-          console.log('hover out');
+        $eachStar.css('filter', '');
+        for (let j = 0; j < score.value; j++) {
           const star = ($('img').get(j));
-          $(star).css('filter', '');
+          $(star).css('filter', settings.shadeColor);
         }
       });
 
