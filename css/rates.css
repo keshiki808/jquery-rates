@@ -12,13 +12,7 @@
 }
 #ratestars div{
     display: inline-block;
-    /* font-size: 16px; */
 }
 
-.starstyle {
-    height: 500px;
-}
 
-/* .colored{
-    filter: invert(0.18) hue-rotate(197deg) sepia(0.85);
-} */
+

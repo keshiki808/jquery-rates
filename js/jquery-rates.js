@@ -9,17 +9,16 @@
     }, options);
 
     return this.each(function () {
-      let $imageStar;
       const $container = this;
+      const $containerName = $(this).attr('id');
 
       const score = {
         value: 0,
       };
 
-      console.log(score.value);
-
       colorHueSetter();
       createStars(this, settings.starCount);
+      setSize();
 
       const $eachStar = $(this).find('img');
 
@@ -48,12 +47,20 @@
           $(star).css('filter', settings.shadeColor);
         }
         score.value = starIndex + 1;
+        console.log($(`${$containerName}Rating`))
+        $(`#${$containerName}Rating`).val(score.value)
       });
+
+      function setSize(){
+        $($container).find('img').css('height', settings.starHeight)
+      }
 
       function createStars(container, count) {
         console.log('Test');
+        const $starInput = $(`<input type="hidden" id = "${$containerName}Rating" name="${$containerName}Rating" value="0" >`);
+        $(container).append($starInput);
         for (i = 0; i < count; i++) {
-          $imageStar = $('<img class = starstyle >');
+          const $imageStar = $('<img class = starstyle >');
           $imageStar.attr('src', `images\\${settings.shape}.png`);
           $(container).append($imageStar);
         }
