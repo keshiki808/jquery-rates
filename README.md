@@ -69,7 +69,7 @@ See the installation and usage sections for the specific details.
 2. If you cannot place the images folder in the root directory due to a limitation of your project, you can adjust the path of the images using the settings of the plugin in the method call. For example, if you have a folder named 'static' in your root directory and your images folder is inside of it in order to indicate the images location you can use the 'imagesFolderLocation' setting and set it to 'static/' like in the following:<br/><br/>
 ![image](https://user-images.githubusercontent.com/84114638/143951899-1b201535-300d-41e7-9635-bfc23b765175.png)
 
-3. Link jQuery to your html file and add the rates script file to your project as well:<br/><br/>
+3. Download JQuery(version 3 or higher) from https://jquery.com/ or use a CDN to link jQuery to your html file and add the rates script file to your project as well:<br/><br/>
 ![scripts](https://user-images.githubusercontent.com/84114638/143790539-3a0ce527-06c4-43d4-9b66-a7b4297a260e.png)
   
 
