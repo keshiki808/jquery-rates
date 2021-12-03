@@ -69,10 +69,12 @@ See the installation and usage sections for the specific details.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. Create an html tag and add an ID to target the element like in the following example: <br />
+1. Create an html tag and add an ID to target the element like in the following example: <br/>
 ![sample1](https://user-images.githubusercontent.com/84114638/143790472-ea4792e9-841a-4a3f-9bbd-4d5c08fb0d43.png)
-2. In the scripts tag of your html file or the external .js script file, call the .rates method on the element where you want to generate the rating system.
-3. If no settings are given then a set of five 25 pixel-sized white stars that turn yellow when hovered over. 
+2. In the scripts tag of your html file or the external .js script file, call the .rates method on the element where you want to generate the rating system.<br/>
+![image](https://user-images.githubusercontent.com/84114638/144529192-781a4974-6a12-429e-b5a0-4267e1bbe74d.png)
+3. If no settings are given then a set of five 25 pixel-sized white stars that turn yellow when hovered over like the following: <br/>
+![image](https://user-images.githubusercontent.com/84114638/144529308-72ef2578-e066-4320-9d11-69ebf0e534d1.png)
 4. Clicking on a star will set the rating to the corresponding star. 
 5. The settings can be edited like the following: shadeColor can be set as either 'red' or 'yellow' to set the fill-in color, starCount can be set as an integer and sets how many shapes are to appear. The shape can be set as 'black-star', 'white-star', 'black-heart', and 'white-heart' and alters the shapes of the rating. <br/>
 ![settings1](https://user-images.githubusercontent.com/84114638/143791415-69a6719a-dff6-48a2-a899-7d419d0a76e2.png) <br/>
