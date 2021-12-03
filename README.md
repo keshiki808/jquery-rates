@@ -45,6 +45,11 @@ The plugin supports different shapes, custom sizes, different shapes and the num
 
 Getting started is easy.
 Clone or download the repository and link the plugin script to your project to your project. Call the method on the id of a div element that you want to see the ratings system and your rating system will appear. The element that you call the .rates method on will have an input form appended to it with a class and name with a suffix of 'Rating' appended to it. For example, if the method is called on a div with the ID of "score" an <input> element with the id and name of "scoreRating" will be generated that can be used in form submissions.
+
+## A Sample Setup:
+
+![image](https://user-images.githubusercontent.com/84114638/144646115-f8aeb31e-e0b8-43d1-988d-53cc735a5314.png)
+
   
 See the installation and usage sections for the specific details.
 
