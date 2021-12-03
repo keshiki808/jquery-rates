@@ -46,12 +46,12 @@ Call the plugin on an using the ID property of an element of your choice and you
 ## Getting Started
 
 Getting started is easy.
-Clone or download the repository and link the plugin script to your project to your project. Call the method on the id of a div element that you want to see the ratings system and your rating system will appear. The element that you call the .rates method on will have an input form appended to it with a class and name with a suffix of 'Rating' appended to it. For example, if the method is called on a div with the ID of "score" an <input> element with the id and name of "scoreRating" will be generated that can be used in form submissions.
+Clone or download the repository and link the plugin script to your project to your project. Call the method on the id of a div element that you want to see the ratings system and your rating system will appear. The element that you call the .rates method on will have an input form appended to it with a class and name with a suffix of 'Rating'. For example, if the method is called on a div with the ID of "score" an <input> element with the id and name of "scoreRating" will be generated that can be used in form submissions.
 
 ## A Sample Setup:
 
-This result:
-![image](https://user-images.githubusercontent.com/84114638/144652854-99d40015-1aaa-43db-bb9d-19457a31827b.png)
+This result: <br/>
+![image](https://user-images.githubusercontent.com/84114638/144660862-eaac97c5-5fb9-44d3-9a94-a0b65182696e.png)
 
 Produced by this code:
 
@@ -62,16 +62,20 @@ See the installation and usage sections for the specific details.
 
 ### Installation
 
-1. Download or clone the repo and place the contents, the css, images and js folders in your project root directory. If you cannot place the images folder in the root directory due to a limitation of your project, you can adjust the path of the images using the settings of the plugin in the method call. For example, if you have a folder named 'static' in your root directory and your images folder is inside of it in order to indicate the images location you can use the 'imagesFolderLocation' setting and set it to 'static/' like in the following:<br/><br/>
-  ![image](https://user-images.githubusercontent.com/84114638/143951899-1b201535-300d-41e7-9635-bfc23b765175.png)
-  
-    This will point the plugin to the location of the folder and images necessary for the plugin.
+1. Download or clone the repo and place the contents, the css, images and js folders in your project root directory. 
 
-2. Link jQuery to your html file and add the rates script file to your project as well:<br/><br/>
+**Note: If you need to adjust the images folder location, do step 2. If everything was placed in your root directory, skip to step 3** <br/>
+
+2. If you cannot place the images folder in the root directory due to a limitation of your project, you can adjust the path of the images using the settings of the plugin in the method call. For example, if you have a folder named 'static' in your root directory and your images folder is inside of it in order to indicate the images location you can use the 'imagesFolderLocation' setting and set it to 'static/' like in the following:<br/><br/>
+![image](https://user-images.githubusercontent.com/84114638/143951899-1b201535-300d-41e7-9635-bfc23b765175.png)
+
+This will point the plugin to the location of the folder and images necessary for the plugin.
+
+3. Link jQuery to your html file and add the rates script file to your project as well:<br/><br/>
 ![scripts](https://user-images.githubusercontent.com/84114638/143790539-3a0ce527-06c4-43d4-9b66-a7b4297a260e.png)
   
 
-3. Link the rates.css file to your html file: <br/><br/>
+4. Link the rates.css file to your html file: <br/><br/>
 ![image](https://user-images.githubusercontent.com/84114638/143952875-7b9c973f-6584-4214-9abe-ad9ea900facd.png)
 
 
@@ -96,13 +100,13 @@ See the installation and usage sections for the specific details.
 7. Note: For the purposes of form submission an input tag will be dynamically created in your HTML file of this structure: <br/>
 `<input type="hidden" id = "${$containerName}Rating" name="${$containerName}Rating" value="0" >`
 
-The id and container name are based on the id of the element you targeting with the plugin. So, for our example the id and name of our input element will be 
+The id and container name are based on the id of the element you targeting with the plugin. So, for our example (id = ratestars) the id and name of our input element will be ratestarsRating.
 
 ## Customizable settings list
 Customizable optional settings
 <pre>
 shadeColor
-  Adjusts the filling color, foru different options are provided as follows.
+  Adjusts the filling color, for different options are provided as follows.
   
     Options:
       "rates-green"
