@@ -69,8 +69,6 @@ See the installation and usage sections for the specific details.
 2. If you cannot place the images folder in the root directory due to a limitation of your project, you can adjust the path of the images using the settings of the plugin in the method call. For example, if you have a folder named 'static' in your root directory and your images folder is inside of it in order to indicate the images location you can use the 'imagesFolderLocation' setting and set it to 'static/' like in the following:<br/><br/>
 ![image](https://user-images.githubusercontent.com/84114638/143951899-1b201535-300d-41e7-9635-bfc23b765175.png)
 
-This will point the plugin to the location of the folder and images necessary for the plugin.
-
 3. Link jQuery to your html file and add the rates script file to your project as well:<br/><br/>
 ![scripts](https://user-images.githubusercontent.com/84114638/143790539-3a0ce527-06c4-43d4-9b66-a7b4297a260e.png)
   
@@ -88,7 +86,7 @@ This will point the plugin to the location of the folder and images necessary fo
 1. After following the installation steps, create an html tag and add an ID to target the element like in the following example: <br/>
 ![sample1](https://user-images.githubusercontent.com/84114638/143790472-ea4792e9-841a-4a3f-9bbd-4d5c08fb0d43.png)
 2. In the scripts tag of your html file or the external .js script file, call the .rates method on the element where you want to generate the rating system.<br/>
-![image](https://user-images.githubusercontent.com/84114638/144529192-781a4974-6a12-429e-b5a0-4267e1bbe74d.png)
+![image](https://user-images.githubusercontent.com/84114638/144662075-3c5a084d-d09c-4a94-8b9d-aa349bd35569.png)
 3. If no settings are given then a set of five 25 pixel-sized white stars that turn yellow when hovered over like the following: <br/>
 ![image](https://user-images.githubusercontent.com/84114638/144529308-72ef2578-e066-4320-9d11-69ebf0e534d1.png)
 4. Clicking on a star will set the rating to the corresponding star. 
@@ -148,7 +146,7 @@ imagesFolderLocation:
      
   
 
-If no value is entered results produce a default of:
+If no value is entered, results produce a default of:
 
 shadeColor: 'rates-yellow',
 shapeHeight: '25px',
