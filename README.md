@@ -27,6 +27,8 @@
 A jQuery plugin that adds a rating system to HTML markup compatible with form submission.
 The plugin supports different shapes, custom sizes, different shapes and the number of shapes.
 
+Call the plugin on an using the ID property of an element of your choice and you'll have a rating system that's all setup and ready to get submitted with your form!
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -48,6 +50,11 @@ Clone or download the repository and link the plugin script to your project to y
 
 ## A Sample Setup:
 
+This result:
+![image](https://user-images.githubusercontent.com/84114638/144652854-99d40015-1aaa-43db-bb9d-19457a31827b.png)
+
+Produced by this code:
+
 ![image](https://user-images.githubusercontent.com/84114638/144646115-f8aeb31e-e0b8-43d1-988d-53cc735a5314.png)
 
   
@@ -55,7 +62,7 @@ See the installation and usage sections for the specific details.
 
 ### Installation
 
-1. Download or clone the repo and place the contents, the css, images and js folders in your project root directory. If you cannot places the images folder in the root directory due to a limitation of your project, you can edit the path of the images using the settings of the plugin in the method call. For example, if you have a folder named 'static' in your root directory and your images folder is inside of it in order to indicate the images location you can use the 'imagesFolderLocation' setting and set it to 'static/' like in the following:<br/><br/>
+1. Download or clone the repo and place the contents, the css, images and js folders in your project root directory. If you cannot place the images folder in the root directory due to a limitation of your project, you can adjust the path of the images using the settings of the plugin in the method call. For example, if you have a folder named 'static' in your root directory and your images folder is inside of it in order to indicate the images location you can use the 'imagesFolderLocation' setting and set it to 'static/' like in the following:<br/><br/>
   ![image](https://user-images.githubusercontent.com/84114638/143951899-1b201535-300d-41e7-9635-bfc23b765175.png)
   
     This will point the plugin to the location of the folder and images necessary for the plugin.
@@ -74,7 +81,7 @@ See the installation and usage sections for the specific details.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. Create an html tag and add an ID to target the element like in the following example: <br/>
+1. After following the installation steps, create an html tag and add an ID to target the element like in the following example: <br/>
 ![sample1](https://user-images.githubusercontent.com/84114638/143790472-ea4792e9-841a-4a3f-9bbd-4d5c08fb0d43.png)
 2. In the scripts tag of your html file or the external .js script file, call the .rates method on the element where you want to generate the rating system.<br/>
 ![image](https://user-images.githubusercontent.com/84114638/144529192-781a4974-6a12-429e-b5a0-4267e1bbe74d.png)
@@ -85,6 +92,67 @@ See the installation and usage sections for the specific details.
 ![settings1](https://user-images.githubusercontent.com/84114638/143791415-69a6719a-dff6-48a2-a899-7d419d0a76e2.png) <br/>
 6. For example the above settings will create a set that looks like the following: <br/>
 ![results1](https://user-images.githubusercontent.com/84114638/143791161-3d70c598-0960-4abc-a1b5-a01aeafca9b6.png)
+
+7. Note: For the purposes of form submission an input tag will be dynamically created in your HTML file of this structure: <br/>
+`<input type="hidden" id = "${$containerName}Rating" name="${$containerName}Rating" value="0" >`
+
+The id and container name are based on the id of the element you targeting with the plugin. So, for our example the id and name of our input element will be 
+
+## Customizable settings list
+Customizable optional settings
+<pre>
+shadeColor
+  Adjusts the filling color, foru different options are provided as follows.
+  
+    Options:
+      "rates-green"
+      "rates-blue"
+      "rates-yellow"
+      "rates-red"
+      
+shapeHeight:
+  Adjust the size of the shape by changing its height
+    Enter any string value that indicates the pixel size.
+    
+      Example options:
+        "25px"
+        "55px"
+        "75px"
+  
+shapeCount: 
+  Adjusts many items(stars or hearts) are part of the rating system
+    Enter an integer appropriate for your project.
+    
+      Example options:
+        3
+        5
+        10
+       
+       
+imagesFolderLocation:
+  Adds a prefix to the path of default images folder which should be in your root directory, only 
+  necessary for pathing conflicts or issues.
+  
+  For example, the default relative path for the white-star image is "images/white-star.png"
+  If you need to adjust the default path to indicate it is nested deeper in your project you 
+  indicate with this setting.If you want to indicate the images folder is nested in a folder 
+  named static use "static/" as the setting, this would set the path as "static/images/white-star.png"
+  
+    Example options:
+      "static/"
+      "styles/"
+     
+  
+
+If no value is entered results produce a default of:
+
+shadeColor: 'rates-yellow',
+shapeHeight: '25px',
+shapeCount: 5,
+shape: 'white-star',
+imagesFolderLocation: '',
+
+</pre>
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
